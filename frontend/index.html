@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Proyectos</title>
+</head>
+<body>
+  <h1>Gestor de Proyectos</h1>
+
+  <h2>Crear nuevo proyecto</h2>
+  <input id="name" placeholder="Nombre del proyecto">
+  <input id="desc" placeholder="Descripción del proyecto">
+  <button onclick="addProject()">Añadir proyecto</button>
+
+  <h2>Editar proyecto</h2>
+<select id="projectEditSelect"></select> <!-- Seleccionar proyecto a editar -->
+<input id="projectEditName" placeholder="Nuevo nombre">
+<input id="projectEditDesc" placeholder="Nueva descripción">
+<button onclick="editProject()">Guardar cambios</button>
+
+
+  <h2>Proyectos existentes</h2>
+  <ul id="projects"></ul>
+<h2>Crear nueva tarea</h2>
+<select id="projectSelect"></select> <!-- Para seleccionar el proyecto -->
+<input id="taskTitle" placeholder="Título de la tarea">
+<select id="taskStatus">
+  <option value="Pendiente">Pendiente</option>
+  <option value="En progreso">En progreso</option>
+  <option value="Completada">Completada</option>
+</select>
+<button onclick="addTask()">Añadir tarea</button>
+
+<h2>Tareas existentes</h2>
+<ul id="tasks"></ul>
+
+
+<h2>Editar tarea</h2>
+<select id="taskEditSelect"></select> <!-- Seleccionar tarea a editar -->
+<input id="taskEditTitle" placeholder="Nuevo título">
+<select id="taskEditStatus">
+  <option value="Pendiente">Pendiente</option>
+  <option value="En progreso">En progreso</option>
+  <option value="Completada">Completada</option>
+</select>
+<button onclick="editTask()">Guardar cambios</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
