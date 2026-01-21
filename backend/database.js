@@ -18,6 +18,13 @@ db.run(`CREATE TABLE IF NOT EXISTS tasks (
   project_id INTEGER NOT NULL,
   FOREIGN KEY(project_id) REFERENCES projects(id)
 )`);
+db.run(`CREATE TABLE IF NOT EXISTS projects (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  description TEXT NOT NULL,
+  image TEXT
+)`);
+
 
 });
 

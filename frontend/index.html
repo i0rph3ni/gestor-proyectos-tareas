@@ -6,6 +6,15 @@
 </head>
 <body>
   <h1>Gestor de Proyectos</h1>
+<h2>Login</h2>
+<input id="username" placeholder="Usuario">
+<input id="password" type="password" placeholder="Contraseña">
+<button onclick="login()">Entrar</button>
+<p id="loginError" style="color:red;"></p>
+
+<div id="app" style="display:none;">
+  <!-- Aquí va TODO tu frontend: proyectos y tareas -->
+</div>
 
   <h2>Crear nuevo proyecto</h2>
   <input id="name" placeholder="Nombre del proyecto">

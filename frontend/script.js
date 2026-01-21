@@ -1,6 +1,19 @@
 const API = 'http://localhost:3000/projects';
 const TASK_API = 'http://localhost:3000/tasks';
 // Función para cargar todos los proyectos y mostrarlos
+function login() {
+  const user = document.getElementById('username').value;
+  const pass = document.getElementById('password').value;
+  const error = document.getElementById('loginError');
+
+  if(user === "admin" && pass === "1234") {
+    document.getElementById('loginError').textContent = "";
+    document.getElementById('app').style.display = "block";
+  } else {
+    error.textContent = "Usuario o contraseña incorrectos";
+  }
+}
+
 function loadProjects() {
   fetch(API)
     .then(res => res.json())

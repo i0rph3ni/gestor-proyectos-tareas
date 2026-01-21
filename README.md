@@ -46,7 +46,13 @@ Relación tareas | proyectos
 Los selects se actualizan automáticamente
 
 Todo dinámico usando fetch y JavaScript puro
+##Login 
+Protege todo el frontend, solo se ve si usuario/contraseña correctos
 
+##React
+Frontend de proyectos migrado a React
+
+API para imágenes: backend ahora permite subir imágenes para cada proyecto
 ##Instrucciones para ejecutar el proyecto
 #Backend
 

@@ -3,6 +3,18 @@ const { body, validationResult } = require('express-validator');
 const db = require('../database');
 
 const router = express.Router();
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' }); // carpeta para guardar imágenes
+
+// POST /projects/:id/image → subir imagen
+router.post('/:id/image', upload.single('image'), (req, res) => {
+  const { id } = req.params;
+  const imagePath = req.file.path; // ruta de la imagen
+
+  db.run('UPDATE projects SET image = ? WHERE id = ?', [imagePath, id], function() {
+    res.json({ changes: this.changes, image: imagePath });
+  });
+});
 
 // GET /projects → lista todos los proyectos
 router.get('/', (req, res) => {
